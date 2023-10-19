@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*dentro do style foi criada varias classes para o desing da página e elas serão chamadas no body*/
+        body{
+            margin: 0;/*o margin 0 aqui foi usado para todos elementos ficarem um próximos do outro*/
+        }
+        .container{
+            display: grid;/*usou se essa classe, para que os elementos sejam estruturados em grid*/
+        }
+
+        header{
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color:blue;/* nessa classe está a formatação de estilo do elemento header*/
+        }
+
+        .menu{
+            grid-column-start: 6;
+            grid-column-end: 12;
+            justify-content: center;/*centraliza menu*/
+            gap: 20px;/* nessa classe está a formatação  do elemento menu*/
+        }
+
+
+        .imagem_manu {
+            grid-column-start: 1;
+            grid-column-end: 3;/* nessa classe está a formatação de estilo do elemento imagem_manu*/
+
+
+        }
+
+        .principal{
+            grid-column-start: 4;
+            grid-column-end: 12;
+            padding-left: 15px;
+            padding-right: 15px;
+            text-align: justify;
+        }
+
+        footer{
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: blue;
+            color: rgb(160, 163, 176) ;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            color:blue
+        }
+
+        a,
+        a:link{
+            text-decoration: none;
+            padding: 8px 16px;
+            border: solid rgb(160, 163, 176) 1px;
+            color: blue;
+        }
+
+        li{
+            float: left;
+        }
+
+        a:hover{
+            background-color:e ;
+            color: rgb(160, 163, 176) ;
+        }
+
+          /*média query para dispositivos movies*/
+          @media only screen and (max-width:768px) {
+        .wrapper{
+            grid-column-start: 1;
+            grid-column-end: 1;
+
+        }
+        .imagem_manu {
+            grid-column-start: 1;
+            grid-column-end: 1;
+        }
+        .principal{
+            grid-column-start: 1;
+            grid-column-end: 1;
+        }
+    }
+    </style>
+</head>
+<body>
+    <!--O header vai ser o cabeçalho, é o que vai aparecer logo no topo da página-->
+    <header class="container">
+      <h1 style="color:rgb(208, 208, 214); text-align: center;">Sobre Mim</h1>
+      <br>  
+    </header>
+    <!--O nav vai ser usado para fazer o menu de opções na página, onde o usuário pode ir visitar a página 
+    sobre mim, formação educacional, portfólio pessoal e contato.-->
+    <nav class="container menu">
+        <ul>
+            <li><a href="index.html">Sobre Mim</a></li>
+            <li><a href="formação-educacional.html">Formação Educacional</a></li>
+            <li><a href="portfólio-pessoal.html">Portfólio Pessoal</a></li>
+            <li><a href="contato.html">contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="container wrapper">
+        <aside class="imagem_manu">
+            <img src="minhafoto.png.jpeg" width="200px" height="220px">
+            <div class="infos">
+                <p style="color: red;"><strong>Ocupação: </strong> Professora</p>
+                <p style="color: red;">
+                    <strong> Data de Nascimento:</strong>
+                    12/01/2005
+                </p>
+            </div>
+        </aside>
+        <section class="principal">
+            <h1>
+                Manoela Silva Dos Santos
+            </h1>
+            <p>Uma menina estudiosa, esforçada, atenciosa, engraçada, educada, um pouco estressada, muito comunicativa não tenho problemas em mim expressar, mas, principalmente focada no que almejo. Um defeito acho que não desistir com facilidade, mesmo quando tudo indica que eu devo desistir, amo recomeços mas não gosto de encerramentos, prazer me chamo Manoela, mas prefiro que me chamem de Manu. </p>
+            <p>Tenho 18 anos, moro na cidade Monte Santo no interior da Bahia. Atualmente sou professora, atuo na modalidade EPJAI (Educação de Pessoas Jovens, Adultas e Idosas), para atuar nessa modalidade não precisa fazer faculdade, apenas ter concluído o ensino médio.No momento estou cursando dois cursos, os dois EAD, realmente é uma coisa louco. Curso administração, que é um curso mas teórico e mais “fácil” pelo menos na minha opinião, curso também Analise e Desenvolvimento de Sistema mais conhecido como ADS.</p>
+            <p>ADS tem sido sem dúvidas um dos maiores desafios que já enfrentei na vida, ainda está sendo, mas entender que eu nem sempre iria conseguir me sair bem nas disciplinas, nas aulas, nós exercícios, foi um processo doloroso e lento, entre lagrimas por não conseguir acertar o que eu deveria acerta e entre risos de quando eu conseguia acerta, entender que os fiascos nas disciplinas não irão me definir profissionalmente, pois sempre busco melhorar e acerta no que eu errei, foi um processo lento também, conquistas e perdas fazem parte desse processo. Percebi que estava tudo bem não ir bem em tudo, porque afinal não somos maquinas. Compreendi que tudo bem, nem todos os dias, serão os nossos dias e que nem todos os dias o meu melhor será 100% as vezes vai ser apenas 10% ou 30%, mas isso não anular que aquele foi o meu melhor, mas com certeza o meu maior aprendizado foi entender e colocar em ação que a disciplina e o foco te leva a perfeição.</p>
+            <p>No meu tempo livre aproveito pra ler, escutar música (eu amo escutar música), assistir série, a minha série preferida é Teen Wolf (ela é perfeita), gosto de sair com os meus amigos e amo principalmente comprar roupas novas. Acredito que deu pra conhecer um pouco de mim e levem consigo essa frase “não há grandes vitórias sem grandes lutas”.</p>
+            <!--Usei algumas br pra fazer a quebra de linha, para o rodapé ficar bem colado no final da página-->
+            <br><br><br><br><br><br>
+        </section>
+    </div>
+    <!--o footer é p rodapé é o que vai aparecer no final da página-->
+    <footer class="container">
+        <h1>Desenvolvido Para Fins Educacionais</h1>
+    </footer>
+        
+</body>
+</html>

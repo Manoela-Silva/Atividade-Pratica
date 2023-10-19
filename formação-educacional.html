@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /*dentro do style foi criada varias classes para o desing da página e elas serão chamadas no body*/
+        body{
+            margin: 0;
+        }
+        .container{
+            display: grid; /*o margin 0 aqui foi usado para todos elementos ficarem um próximos do outro*/
+        }
+
+        header{
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color:blue; /* nessa classe está a formatação de estilo do elemento header*/
+        }
+
+        .menu{
+            grid-column-start: 6;
+            grid-column-end: 12;
+            justify-content: center;/*centraliza menu*/
+            gap: 20px; /* nessa classe está a formatação  do elemento menu*/
+        }
+
+
+        .imagem_manu {
+            grid-column-start: 1;
+            grid-column-end: 3; /* nessa classe está a formatação de estilo do elemento imagem_manu*/
+
+        }
+
+        .principal{
+            grid-column-start: 4;
+            grid-column-end: 12;
+            padding-left: 15px;
+            padding-right: 15px;
+            text-align: justify;
+        }
+
+        footer{
+            grid-column-start: 1;
+            grid-column-end: 12;
+            background-color: blue;
+            color: rgb(160, 163, 176) ;
+            text-align: center;
+        }
+
+        ul {
+            list-style-type: none;
+            color:blue
+        }
+
+        a,
+        a:link{
+            text-decoration: none;
+            padding: 8px 16px;
+            border: solid rgb(160, 163, 176) 1px;
+            color: blue;
+        }
+
+        li{
+            float: left;
+        }
+
+        a:hover{
+            background-color:e ;
+            color: rgb(160, 163, 176) ;
+        }
+
+          /*média query para dispositivos movies*/
+          @media only screen and (max-width:768px) {
+        .wrapper{
+            grid-column-start: 1;
+            grid-column-end: 1;
+
+        }
+        .imagem_manu {
+            grid-column-start: 1;
+            grid-column-end: 1;
+        }
+        .principal{
+            grid-column-start: 1;
+            grid-column-end: 1;
+        }
+    }
+    </style>
+</head>
+<body>
+     <!--O header vai ser o cabeçalho, é o que vai aparecer logo no topo da página-->
+    <header class="container">
+      <h1 style="color:rgb(208, 208, 214); text-align: center;">Formação  Educacional</h1>
+      <br>  
+    </header>
+    <!--O nav vai ser usado para fazer o menu de opções na página, onde o usuário pode ir visitar a página 
+    sobre mim, formação educacional, portfólio pessoal e contato.-->
+    <nav class="container menu">
+        <ul>
+            <li><a href="index.html">Sobre Mim</a></li>
+            <li><a href="formação-educacional.html">Formação Educacional</a></li>
+            <li><a href="portfólio-pessoal.html">Portfólio Pessoal</a></li>
+            <li><a href="contato.html">contato</a></li>
+        </ul>
+    </nav>
+
+    <div class="container wrapper">
+        <aside class="imagem_manu">
+            <img src="minhafoto.png.jpeg" width="200px" height="220px">
+            <div class="infos">
+                <p style="color: red;"><strong>Ocupação: </strong> Professora</p>
+                <p style="color: red;">
+                    <strong> Data de Nascimento:</strong>
+                    12/01/2005
+                </p>
+            </div>
+        </aside>
+        <section class="principal">
+            <h1>
+                Manoela Silva Dos Santos
+            </h1>
+           <p>Ensino médio concluído</p>
+           <p>Cursos básico de informática:<span style="color:red;" >(WINDOWS 7, WORD 2013 E INTERNET 10).</span></p>
+           <p>Curso de informática profissionais: <span style="color:red;" >(DIGITAÇÃO PROFISSIONAL, ATENDENTE DE FARMÁCIA E OPERADOR DE CAIXA).</span></p>
+           <!--Usei algumas br pra fazer a quebra de linha, para o rodapé ficar bem colado no final da página-->
+           <br><br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+        </section>
+    </div>
+    <!--o footer é p rodapé é o que vai aparecer no final da página-->
+    <footer class="container">
+        <h1>Desenvolvido Para Fins Educacionais</h1>
+    </footer>
+        
+</body>
+</html>
